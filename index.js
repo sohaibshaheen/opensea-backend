@@ -1,12 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 // for public statis assets
 app.use(express.static('public'));
-
-
-
 
 var CONTRACT_URI_METADATA = {
     'opensea-contract' : {
@@ -70,6 +67,6 @@ app.get('/contract/:contract_name', function (req, res) {
     //res.send(req.params);
 })
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`App available on http://localhost:${port}`)
 })
