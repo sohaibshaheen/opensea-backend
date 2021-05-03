@@ -68,5 +68,5 @@ app.get('/contract/:contract_name', function (req, res) {
 })
 
 app.listen(PORT, () => {
-  console.log(`App available on http://localhost:${port}`)
+  console.log(`App available on http://localhost:${PORT}`)
 })
